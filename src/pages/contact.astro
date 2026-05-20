@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Contact Broadway Pizza Nedlands — phone, address, hours, and delivery area.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Find Us</h1>
+      <p>165 Broadway, Nedlands WA 6009</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <div class="contact-card">
+        <div class="card-icon">📍</div>
+        <h3>Location</h3>
+        <p>165 Broadway, Nedlands WA 6009</p>
+        <p class="card-note">Broadway Fair Shopping Centre</p>
+        <a href="https://maps.google.com/?q=165+Broadway+Nedlands+WA+6009" target="_blank" rel="noopener" class="btn-small">Open in Maps →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">📞</div>
+        <h3>Phone</h3>
+        <p><a href="tel:0893898500">(08) 9389 8500</a></p>
+        <p class="card-note">Call us to place your order</p>
+        <a href="tel:0893898500" class="btn-small">Call Now →</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">🕐</div>
+        <h3>Opening Hours</h3>
+        <div class="hours-list">
+          <div class="hours-row"><span>Monday – Thursday</span><span>4:15pm – 9pm</span></div>
+          <div class="hours-row"><span>Friday</span><span>4pm – 10pm</span></div>
+          <div class="hours-row"><span>Saturday</span><span>4:15pm – 10pm</span></div>
+          <div class="hours-row"><span>Sunday</span><span>4:15pm – 9pm</span></div>
+        </div>
+        <p class="card-note">Online orders close 30 minutes before</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">🚗</div>
+        <h3>Delivery</h3>
+        <p class="delivery-suburbs">We deliver hot and fresh to:</p>
+        <div class="suburbs-list">
+          <span>Nedlands</span><span>Dalkeith</span><span>Crawley</span><span>Claremont</span><span>Mount Claremont</span><span>Peppermint Grove</span><span>Cottesloe</span><span>Mosman Park</span><span>Shenton Park</span><span>Subiaco</span><span>West Perth</span>
+        </div>
+        <p class="card-note">Delivery hours match store hours</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="container">
+      <h2>Find Us on the Map</h2>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.7!2d115.8137!3d-31.9841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDU5JzA0LjAiUyAxMTXCsDQ4JzUyLjAiRQ!5e0!3m2!1sen!2sau!4v1"
+          width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="order-banner">
+    <div class="container">
+      <h2>Ready to order?</h2>
+      <p>We don't take online orders yet — but we're always on the phone. Give us a call!</p>
+      <a href="tel:0893898500" class="btn btn-large">📞 (08) 9389 8500</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.page-header { background: var(--warm); padding: 3rem 0 2.5rem; text-align: center; }
+.page-header h1 { font-size: 3rem; color: white; margin-bottom: 0.5rem; }
+.page-header p { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+.contact-section { padding: 4rem 0 2rem; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.contact-card { background: white; border-radius: 12px; padding: 2rem; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.card-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.contact-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--charcoal); }
+.contact-card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.3rem; }
+.contact-card a { color: var(--warm); font-weight: 600; }
+.contact-card a:hover { color: var(--tomato); }
+.card-note { font-size: 0.78rem !important; color: var(--text-light) !important; margin-top: 0.5rem !important; }
+.btn-small { display: inline-block; margin-top: 0.8rem; font-size: 0.82rem; font-weight: 600; color: var(--warm); text-decoration: none; border: 1px solid var(--warm); padding: 0.3rem 0.7rem; border-radius: 4px; }
+.btn-small:hover { background: var(--warm); color: white; }
+
+.hours-list { margin-top: 0.5rem; }
+.hours-row { display: flex; justify-content: space-between; padding: 0.3rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+.hours-row:last-child { border-bottom: none; }
+.hours-row span:first-child { color: var(--text); }
+.hours-row span:last-child { color: var(--warm); font-weight: 600; }
+
+.delivery-suburbs { margin-bottom: 0.5rem !important; }
+.suburbs-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+.suburbs-list span { background: var(--cream); color: var(--text); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; }
+
+.map-section { padding: 3rem 0 4rem; }
+.map-section h2 { font-size: 2rem; text-align: center; margin-bottom: 2rem; }
+.map-embed { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+
+.order-banner { background: var(--charcoal); padding: 4rem 0; text-align: center; }
+.order-banner h2 { font-size: 2.5rem; color: white; margin-bottom: 0.8rem; }
+.order-banner p { color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
+.btn-large { padding: 1rem 2.5rem; font-size: 1.1rem; }
+</style>

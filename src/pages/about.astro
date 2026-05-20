@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Broadway Pizza — 55 years in Nedlands. Perth's original pizza legend since 1969.">
+  <section class="page-header">
+    <div class="container">
+      <p class="tagline-sm">Since 1969</p>
+      <h1>A Slice of Perth History</h1>
+      <p>165 Broadway, Nedlands — still going strong after all these years.</p>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="container story-grid">
+      <div class="story-image">
+        <div class="pizza-emoji">🍕</div>
+      </div>
+      <div class="story-text">
+        <h2>From Al's to Broadway</h2>
+        <p>It started as Al's Pizza in 1969 — a humble little shop on Broadway with a brick oven and a simple idea: make really good pizza, charge fair prices, treat people like neighbours.</p>
+        <p>Five and a half decades later, the name changed to Broadway Pizza, the oven got an upgrade, and the suburb around us has grown and changed — but the pizza? Same recipe. Same commitment to quality. Same Nedlands institution.</p>
+        <p>We've fed generations of families, late-night uni students, sports teams after the game, couples on date night, and locals who just want a reliable, great-tasting pizza. That's what we do.</p>
+        <p>We're not the fanciest pizza in Perth. We're not trying to be. We're the pizza that's been here, that will be here, and that you can always count on.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+      <h2>What We Stand For</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🔥</div>
+          <h3>Fresh, Not Fancy</h3>
+          <p>Made to order, every time. We don't do pre-made, we don't do shortcuts. Your pizza is made when you call.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💚</div>
+          <h3>Family & Locals First</h3>
+          <p>We're not a chain. We're a neighbourhood shop. When you walk in, we know you. When you call, we pick up.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💯</div>
+          <h3>Value You Can Count On</h3>
+          <p>55 years of fair pricing. Great pizza doesn't have to cost a fortune. Our sizes actually feed people.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Consistency</h3>
+          <p>The pizza you had five years ago? It'll be the same today. That's not an accident — it's a promise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="container">
+      <div class="facts-grid">
+        <div class="fact">
+          <div class="fact-num">55+</div>
+          <div class="fact-label">Years in Nedlands</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">11</div>
+          <div class="fact-label">Delivery Suburbs</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">1969</div>
+          <div class="fact-label">Year Founded</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">∞</div>
+          <div class="fact-label">Satisfied Customers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit-cta">
+    <div class="container">
+      <h2>Come Say Hello</h2>
+      <p>We're in the Broadway Fair Shopping Centre, right on Broadway. Easy parking, easy find.</p>
+      <a href="/contact" class="btn">Get Directions & Hours →</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.page-header { background: var(--warm); padding: 4rem 0 3rem; text-align: center; }
+.page-header .tagline-sm { color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; }
+.page-header h1 { font-size: 3rem; color: white; margin-bottom: 0.5rem; }
+.page-header p { color: rgba(255,255,255,0.8); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+.story { padding: 5rem 0; }
+.story-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: center; }
+@media (max-width: 768px) { .story-grid { grid-template-columns: 1fr; } .story-image { display: none; } }
+.story-image { display: flex; align-items: center; justify-content: center; }
+.pizza-emoji { font-size: 10rem; opacity: 0.15; }
+.story-text h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+.story-text p { font-size: 1rem; color: var(--text-light); line-height: 1.9; margin-bottom: 1rem; }
+
+.values { background: var(--cream); padding: 5rem 0; }
+.values h2 { font-size: 2rem; text-align: center; margin-bottom: 3rem; }
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+.value-card { background: white; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: var(--shadow); }
+.value-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.value-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--charcoal); }
+.value-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.7; }
+
+.facts { padding: 4rem 0; }
+.facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+@media (max-width: 768px) { .facts-grid { grid-template-columns: repeat(2, 1fr); } }
+.fact { text-align: center; background: var(--charcoal); border-radius: 12px; padding: 2rem; }
+.fact-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--warm); line-height: 1; }
+.fact-label { font-size: 0.78rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem; }
+
+.visit-cta { padding: 5rem 0; text-align: center; background: var(--cream); }
+.visit-cta h2 { font-size: 2rem; margin-bottom: 0.8rem; }
+.visit-cta p { color: var(--text-light); margin-bottom: 2rem; }
+</style>

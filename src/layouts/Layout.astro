@@ -1,0 +1,144 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Broadway Pizza — Nedlands' favourite since 1969. Wood-fired style pizzas, family meals, delivery." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Broadway Pizza Nedlands</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🍕</span>
+        <span class="logo-text">Broadway<span class="logo-accent">Pizza</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="tel:0893898500" class="nav-call">📞 Call Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main><slot /></main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🍕</span>
+        <span class="logo-text">Broadway<span class="logo-accent">Pizza</span></span>
+        <p>165 Broadway, Nedlands WA 6009<br/>Since 1969. Nedlands' original pizza legend.</p>
+      </div>
+      <div class="footer-hours">
+        <h3>Opening Hours</h3>
+        <p>Mon–Thu: 4:15pm – 9pm</p>
+        <p>Fri: 4pm – 10pm</p>
+        <p>Sat: 4:15pm – 10pm</p>
+        <p>Sun: 4:15pm – 9pm</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Get In Touch</h3>
+        <p><a href="tel:0893898500">(08) 9389 8500</a></p>
+        <p>Delivery: Nedlands, Dalkeith, Crawley, Claremont, Mount Claremont, Peppermint Grove, Cottesloe, Mosman Park, Shenton Park, Subiaco, West Perth</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Broadway Pizza Nedlands. Made with ❤️ in Perth.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav-links')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #faf7f2;
+    --cream: #f5f0e8;
+    --warm: #c84630;
+    --tomato: #b83020;
+    --charcoal: #2a2520;
+    --text: #3d3530;
+    --text-light: #7a6f68;
+    --border: rgba(42,37,32,0.1);
+    --shadow: 0 4px 24px rgba(42,37,32,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+  a { color: var(--warm); text-decoration: none; }
+  a:hover { color: var(--tomato); }
+
+  nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: var(--shadow);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.8rem 1.5rem;
+  }
+  .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+  .logo-icon { font-size: 1.8rem; }
+  .logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--charcoal); letter-spacing: 0.05em; }
+  .logo-accent { color: var(--warm); }
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--text); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .nav-links a:hover { color: var(--warm); }
+  .nav-call { background: var(--warm) !important; color: white !important; padding: 0.5rem 1rem; border-radius: 4px; }
+  .nav-call:hover { background: var(--tomato) !important; color: white !important; }
+  .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+  main { min-height: 75vh; }
+
+  footer { background: var(--charcoal); color: rgba(255,255,255,0.7); margin-top: 4rem; }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem; padding: 3rem 1.5rem;
+  }
+  .footer-brand .logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: white; }
+  .footer-brand p { font-size: 0.85rem; margin-top: 0.5rem; line-height: 1.7; }
+  .footer-hours h3, .footer-contact h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.1em; color: var(--warm); margin-bottom: 0.8rem; text-transform: uppercase; }
+  .footer-hours p { font-size: 0.88rem; margin-bottom: 0.3rem; }
+  .footer-contact p { font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .footer-contact a { color: rgba(255,255,255,0.7); }
+  .footer-contact a:hover { color: var(--warm); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); text-align: center; padding: 1.2rem; font-size: 0.78rem; }
+
+  .btn { display: inline-block; padding: 0.8rem 2rem; background: var(--warm); color: white; border-radius: 4px; font-weight: 600; letter-spacing: 0.03em; transition: background 0.2s, transform 0.2s; }
+  .btn:hover { background: var(--tomato); color: white; transform: translateY(-2px); }
+  .btn-outline { background: transparent; border: 2px solid var(--warm); color: var(--warm); }
+  .btn-outline:hover { background: var(--warm); color: white; }
+
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 1rem; gap: 0.8rem; box-shadow: var(--shadow); }
+    .nav-links.open { display: flex; }
+  }
+</style>

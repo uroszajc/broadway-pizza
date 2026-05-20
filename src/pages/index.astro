@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <section class="hero">
+    <div class="hero-content">
+      <p class="tagline">🍕 Perth's Original Pizza Legend</p>
+      <h1>Since 1969,<br/>Nedlands has<br/>trusted Broadway.</h1>
+      <p class="sub">Wood-fired style pizzas, big family meals, and hot delivery across 11 suburbs. The original Al's Pizza, still going strong.</p>
+      <div class="hero-actions">
+        <a href="tel:0893898500" class="btn">📞 Call to Order</a>
+        <a href="/menu" class="btn btn-outline">View Menu →</a>
+      </div>
+      <p class="hero-note">Open 4pm daily · 165 Broadway, Nedlands</p>
+    </div>
+    <div class="hero-pizza">🍕</div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon">🔥</div>
+          <h3>Wood-Fired Style</h3>
+          <p>Classic oven-baked pizzas with that crispy base and bubbly cheese. No gimmicks — just good pizza done right for 55 years.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👨‍👩‍👧‍👦</div>
+          <h3>Family Feeds</h3>
+          <p>Large family sizes, great value meal deals, and portions that actually fill a table. Bring everyone — nobody leaves hungry.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🚗</div>
+          <h3>Hot Delivery</h3>
+          <p>We deliver to Nedlands, Dalkeith, Claremont, Cottesloe, Subiaco, Mosman Park, Shenton Park and more — hot and fresh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bestsellers">
+    <div class="container">
+      <h2>Customer Favourites</h2>
+      <div class="pizza-grid">
+        <div class="pizza-card">
+          <div class="pizza-badge">🔥 Best Seller</div>
+          <h3>The Works BBQ Chicken</h3>
+          <p class="pizza-desc">Chicken, onion, mushroom, BBQ sauce</p>
+          <p class="pizza-price">$14.90 – $27.90</p>
+        </div>
+        <div class="pizza-card">
+          <h3>Sicilian Meatlovers</h3>
+          <p class="pizza-desc">Ham, pepperoni, beef, bacon, BBQ sauce</p>
+          <p class="pizza-price">$13.90 – $29.90</p>
+        </div>
+        <div class="pizza-card">
+          <h3>Supreme</h3>
+          <p class="pizza-desc">The big one — loaded with everything good</p>
+          <p class="pizza-price">$15.90 – $29.90</p>
+        </div>
+        <div class="pizza-card">
+          <h3>Margherita</h3>
+          <p class="pizza-desc">Classic tomato, mozzarella, fresh basil</p>
+          <p class="pizza-price">$10.90 – $21.90</p>
+        </div>
+      </div>
+      <div class="bestsellers-cta">
+        <a href="/menu" class="btn">See Full Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="history">
+    <div class="container history-grid">
+      <div class="history-text">
+        <p class="tagline-sm">55+ Years</p>
+        <h2>A Nedlands Institution</h2>
+        <p>Opened in 1969 as Al's Pizza, Broadway Pizza has been serving the Nedlands community for over five decades. From humble beginnings to becoming a local landmark, we've fed generations of families, students, and locals who keep coming back.</p>
+        <p>Same commitment to quality, same great taste — just the way it's always been.</p>
+        <a href="/about" class="btn-outline btn" style="margin-top:1rem">Our Story →</a>
+      </div>
+      <div class="history-stats">
+        <div class="stat">
+          <div class="stat-num">55+</div>
+          <div class="stat-label">Years in Nedlands</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">11</div>
+          <div class="stat-label">Delivery Suburbs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1970</div>
+          <div class="stat-label">Started as Al's Pizza</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hours-preview">
+    <div class="container">
+      <h2>Come Visit Us</h2>
+      <div class="hours-grid">
+        <div class="hours-day">
+          <span>Mon – Thu</span><span>4:15pm – 9pm</span>
+        </div>
+        <div class="hours-day">
+          <span>Friday</span><span>4pm – 10pm</span>
+        </div>
+        <div class="hours-day">
+          <span>Saturday</span><span>4:15pm – 10pm</span>
+        </div>
+        <div class="hours-day">
+          <span>Sunday</span><span>4:15pm – 9pm</span>
+        </div>
+      </div>
+      <p class="hours-address">📍 165 Broadway, Nedlands WA 6009 · Broadway Fair Shopping Centre</p>
+      <a href="tel:0893898500" class="btn">📞 (08) 9389 8500</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.hero {
+  background: linear-gradient(135deg, #c84630 0%, #e85d30 50%, #c84630 100%);
+  padding: 5rem 1.5rem 4rem;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-content { position: relative; max-width: 700px; text-align: center; }
+.tagline { color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
+h1 { font-size: clamp(2.8rem, 8vw, 5.5rem); color: white; line-height: 0.95; margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.sub { font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.hero-note { color: rgba(255,255,255,0.7); font-size: 0.88rem; }
+.hero-pizza { position: absolute; bottom: -40px; right: -20px; font-size: 12rem; opacity: 0.08; transform: rotate(15deg); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 4rem 0; }
+.features { background: var(--cream); }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; }
+.feature { text-align: center; padding: 1rem; }
+.feature-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.feature h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--charcoal); }
+.feature p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+
+.bestsellers { padding: 5rem 0; }
+.bestsellers h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+.pizza-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+.pizza-card { background: white; border-radius: 12px; padding: 1.8rem; border: 1px solid var(--border); position: relative; transition: box-shadow 0.2s, transform 0.2s; }
+.pizza-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.pizza-badge { position: absolute; top: -1px; right: 1rem; background: var(--warm); color: white; font-size: 0.7rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 0 0 6px 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+.pizza-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--charcoal); }
+.pizza-desc { font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.8rem; }
+.pizza-price { font-weight: 700; color: var(--warm); font-size: 1.05rem; }
+.bestsellers-cta { text-align: center; margin-top: 2.5rem; }
+
+.history { background: var(--cream); padding: 5rem 0; }
+.history-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+@media (max-width: 768px) { .history-grid { grid-template-columns: 1fr; } }
+.tagline-sm { color: var(--warm); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; }
+.history-text h2 { font-size: 2rem; margin-bottom: 1rem; }
+.history-text p { font-size: 0.95rem; color: var(--text-light); line-height: 1.8; margin-bottom: 0.8rem; }
+.history-stats { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.stat { text-align: center; background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow); }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--warm); line-height: 1; }
+.stat-label { font-size: 0.82rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem; }
+
+.hours-preview { padding: 5rem 0; text-align: center; }
+.hours-preview h2 { font-size: 2.2rem; margin-bottom: 2rem; }
+.hours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin-bottom: 1.5rem; }
+.hours-day { background: white; border-radius: 8px; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border); font-size: 0.9rem; font-weight: 500; }
+.hours-day span:last-child { color: var(--warm); font-weight: 700; }
+.hours-address { font-size: 0.88rem; color: var(--text-light); margin-bottom: 1.5rem; }
+</style>
