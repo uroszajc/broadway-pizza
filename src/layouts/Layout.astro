@@ -3,6 +3,7 @@ interface Props {
   title: string;
   description?: string;
 }
+const basePath = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL.slice(0, -1) : import.meta.env.BASE_URL;
 const { title, description = "Broadway Pizza — Nedlands' favourite since 1969. Wood-fired style pizzas, family meals, delivery." } = Astro.props;
 ---
 
@@ -26,9 +27,9 @@ const { title, description = "Broadway Pizza — Nedlands' favourite since 1969.
       </a>
       <button class="menu-toggle" aria-label="Menu">☰</button>
       <ul class="nav-links">
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href={`${basePath}/menu`}>Menu</a></li>
+        <li><a href={`${basePath}/about`}>About</a></li>
+        <li><a href={`${basePath}/contact`}>Contact</a></li>
         <li><a href="tel:0893898500" class="nav-call">📞 Call Now</a></li>
       </ul>
     </div>
